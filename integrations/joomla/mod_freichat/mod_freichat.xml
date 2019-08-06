@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension type="module" version="3.1.0" client="site" method="upgrade">
+    <name>FreiChat</name>
+    <creationDate>5th August 2019</creationDate>
+    <author>Codologic</author>
+    <version>1.0.0</version>
+    <copyright>Codologic(2010-2019)</copyright>
+    <license>GNU/GPLv3 http://www.gnu.org/licenses/gpl-3.0.html</license>
+    <authorEmail>admin@codologic.com</authorEmail>
+    <authorUrl>https://freichat.com</authorUrl>
+    <description>A scalable chat solution</description>
+
+    <scriptfile>install.php</scriptfile>
+
+    <files>
+        <filename>mod_freichat.xml</filename>
+        <filename module="mod_freichat">mod_freichat.php</filename>
+        <filename>index.html</filename>
+        <filename>config.php</filename>
+        <filename>LICENSE.txt</filename>
+        <filename>tmpl/default.php</filename>
+        <filename>tmpl/index.html</filename>
+        <filename>language/en-GB/en-GB.mod_freichat.ini</filename>
+    </files>
+
+    <config>
+        <fields name="params">
+            <fieldset name="basic">
+                <field
+                        name="token"
+                        type="text"
+                        default="TokenNotYetGenerated"
+                        label="COM_FREICHAT_CONFIG_TOKEN_LABEL"
+                        description="COM_FREICHAT_CONFIG_TOKEN_DESCRIPTION"/>
+            </fieldset>
+        </fields>
+    </config>
+
+    <updateservers>
+        <server type="extension" name="FreiChat Updates">https://nodelb.freichat.com/api/static/v1/updates/joomla.xml</server>
+    </updateservers>
+</extension>

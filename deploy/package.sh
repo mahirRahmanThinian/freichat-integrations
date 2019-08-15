@@ -22,3 +22,7 @@ zip -r $BASE_DIR/bin/${NAME}.v${VERSION}.zip .
 cd $INTEG_DIR/codoforum
 NAME=codoforum_freichat
 zip -r $BASE_DIR/bin/${NAME}.v${VERSION}.zip .
+
+cd $INTEG_DIR/elgg
+NAME=elgg_freichat
+zip -r $BASE_DIR/bin/${NAME}.v${VERSION}.zip .

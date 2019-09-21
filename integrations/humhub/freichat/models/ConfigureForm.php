@@ -11,7 +11,7 @@ class ConfigureForm extends \yii\base\Model
 {
 
     public $token;
-
+    public $user_filters;
     /**
      * @inheritdoc
      */
@@ -19,8 +19,10 @@ class ConfigureForm extends \yii\base\Model
     {
         return [
             ['token', 'string'],
+            ['user_filters', 'string']
         ];
     }
+
 
     /**
      * @inheritdoc
@@ -29,6 +31,7 @@ class ConfigureForm extends \yii\base\Model
     {
         return [
             'token' => Yii::t('FreichatModule.base', 'FreiChat Token:'),
+            'user_filters' => Yii::t('FreichatModule.base', 'Who should be visible in user list:'),
         ];
     }
 
@@ -39,6 +42,7 @@ class ConfigureForm extends \yii\base\Model
     {
         return [
             'token' => Yii::t('FreichatModule.base', 'Token used to communicate with FreiChat server. Please do not edit this.'),
+            'user_filters' => Yii::t('FreichatModule.base', 'The users will be filtered based on the option selected'),
         ];
     }
 

@@ -7,7 +7,7 @@
     "minVersion": "1.2"
   },
   "keywords": ["chat", "freichat", "free", "saas"],
-  "screenshots": ["assets/sc1.png", "assets/sc2.png"],
+  "screenshots": ["assets/sc1.png", "assets/sc2.png", "assets/sc3.png"],
   "homepage": "https://freichat.com",
   "authors": [
     {

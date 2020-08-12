@@ -8,23 +8,19 @@ use yii\helpers\Url;
 
 <div class="panel panel-default">
 
-    <div class="panel-heading"><?php echo Yii::t('FreichatModule.base', 'FreiChat configuration'); ?></div>
+    <div class="panel-heading"><?= Yii::t('FreichatModule.base', 'FreiChat configuration'); ?></div>
 
     <div class="panel-body">
 
         <?php $form = ActiveForm::begin(['id' => 'configure-form']); ?>
         <div class="form-group">
-            <?php echo $form->field($model, 'token'); ?>
+            <?= $form->field($model, 'token')->textInput(['class' => 'form-control', 'disabled' => true])->label(false) ?>
+
         </div>
 
         <div class="form-group">
-            <?php echo $form->field($model, 'user_filters')->dropDownList(['users' => 'Online users', 'friends' => 'Online friends'], ['data-ui-select2' => '']); ?>
-        </div>
-
-        <div class="form-group">
-            <?php echo Html::submitButton(Yii::t('FreichatModule.base', 'Save'), ['class' => 'btn btn-primary', 'data-ui-loader' => '']); ?>
-            <a class="btn btn-default"
-               href="<?php echo Url::to(['/admin/module']); ?>"><?php echo Yii::t('FreichatModule.base', 'Back to modules'); ?></a>
+            <?= Html::submitButton(Yii::t('FreichatModule.base', 'Save'), ['class' => 'btn btn-primary', 'data-ui-loader' => '']); ?>
+            <a class="btn btn-default" href="<?= Url::to(['/admin/module']); ?>"><?= \Yii::t('FreichatModule.base', 'Back to modules'); ?></a>
         </div>
 
         <?php ActiveForm::end(); ?>

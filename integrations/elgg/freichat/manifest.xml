@@ -11,7 +11,7 @@
     <category>communication</category>
     <requires>
         <type>elgg_release</type>
-        <version>2.3</version>
+        <version>1.12</version>
     </requires>
     <requires>
         <type>php_extension</type>

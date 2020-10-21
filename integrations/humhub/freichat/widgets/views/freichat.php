@@ -1,7 +1,7 @@
 <?php
 
 $name = base64_encode($name);
-$avatar = base64_encode("https://api.adorable.io/avatars/60/{$name}.png");
+$avatar = base64_encode($avatar);
 $pubKey = explode("$$", $token)[0];
 $change = date('Ymd');
 $friendIdsEncoded = json_encode($friendIds);

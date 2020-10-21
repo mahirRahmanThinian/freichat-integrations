@@ -1,20 +1,22 @@
 <?php
 
-namespace humhub\modules\freichat\widgets;
+namespace humhub\modules\freichat\controllers;
 
+use humhub\modules\content\components\ContentContainerController;
 use Yii;
-use yii\helpers\Url;
-use humhub\libs\Html;
-use humhub\components\Widget;
 
-class FreiChatBar extends Widget
+/**
+ * Add chat page
+ *
+ * @author Codologic
+ */
+class ChatController extends ContentContainerController
 {
-    public $contentContainer;
+    public $hideSidebar = false;
 
-    /**
-     * @inheritdoc
-     */
-    public function run()
+    public $requireContainer = false;
+
+    public function actionIndex()
     {
         $settings = Yii::$app->getModule('freichat')->settings;
         $token = $settings->get('token');
@@ -36,6 +38,10 @@ class FreiChatBar extends Widget
             $friendIds = null;
         }
 
-        return $this->render('freichat', ['token' => $token, 'baseUrl' => $baseUrl, 'id' => $id, 'name' => $name, 'avatar' => $avatar, 'friendIds' => $friendIds]);
+        return $this->render('index', ['token' => $token, 'baseUrl' => $baseUrl, 'id' => $id, 'name' => $name, 'avatar' => $avatar, 'friendIds' => $friendIds]);
+    }
+
+    public function actionSearch() {
+        return "HI";
     }
 }

@@ -3,11 +3,31 @@
 namespace humhub\modules\freichat;
 
 use Exception;
+use humhub\components\Event;
 use humhub\modules\freichat\widgets\FreiChatBar;
 use Yii;
 
 class Events extends \yii\base\BaseObject
 {
+
+    /**
+     * On build of the TopMenu, check if module is enabled
+     * When enabled add a menu item
+     *
+     * @param Event $event
+     */
+    public static function onTopMenuInit($event)
+    {/*
+        $event->sender->addItem(array(
+            'label' => Yii::t('CfilesModule.base', 'Open Chat'),
+            'id' => 'freichat',
+            'icon' => '<i class="fa fa-envelope"></i>',
+            'url' => \yii\helpers\Url::to(['/freichat/chat/chat']),
+            'sortOrder' => 400,
+            'isActive' => (Yii::$app->controller->module && Yii::$app->controller->module->id == 'freichat'),
+        ));*/
+    }
+
     public static function loadFreiChat($event)
     {
         if (Yii::$app->user->isGuest) {
@@ -75,3 +95,4 @@ class Events extends \yii\base\BaseObject
         return array("key" => $key, "error" => null);
     }
 }
+

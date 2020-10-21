@@ -2,6 +2,8 @@
 
 namespace humhub\modules\freichat;
 
+use humhub\widgets\TopMenu;
+
 return [
     'id' => 'freichat',
     'class' => 'humhub\modules\freichat\Module',
@@ -16,12 +18,9 @@ return [
             ]
         ],
         [
-            'class' => \humhub\modules\space\widgets\Sidebar::class,
-            'event' => \humhub\modules\space\widgets\Sidebar::EVENT_INIT,
-            'callback' => [
-                'humhub\modules\freichat\Events',
-                'loadFreiChat'
-            ]
+            'class' => TopMenu::class,
+            'event' => TopMenu::EVENT_INIT,
+            'callback' => ['humhub\modules\freichat\Events', 'onTopMenuInit']
         ],
         [
             'class' => \humhub\components\ModuleManager::class,

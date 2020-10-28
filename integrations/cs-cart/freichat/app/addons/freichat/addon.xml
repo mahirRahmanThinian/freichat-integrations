@@ -1,0 +1,30 @@
+<?xml version="1.0"?>
+<addon scheme="3.0">
+    <id>freichat</id>
+    <version>1.0.3</version>
+    <position>0</position>
+    <status>active</status>
+    <has_icon>Y</has_icon>
+    <default_language>en</default_language>
+    <auto_install>MULTIVENDOR,ULTIMATE</auto_install>
+    <priority>100500</priority>
+    <functions>
+        <item for="install">fn_install_freichat</item>
+    </functions>
+    <settings>
+       <sections>
+           <section id="general">
+               <items>
+                    <item id="notice" edition_type="ROOT">
+                        <type>info</type>
+                        <handler>fn_freichat_token_notice_handler</handler>
+                    </item>
+                   <item id="token">
+                       <name>FreiChat token</name>
+                       <type>input</type>
+                   </item>
+               </items>
+           </section>
+       </sections>
+    </settings>
+</addon>

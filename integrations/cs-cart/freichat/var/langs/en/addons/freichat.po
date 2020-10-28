@@ -1,0 +1,23 @@
+msgid ""
+msgstr "Project-Id-Version: tygh"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Language-Team: English\n"
+"Language: en_US\n"
+
+msgctxt "LanguageName"
+msgid "Localized language name"
+msgstr "English"
+
+msgctxt "Addons::name::freichat"
+msgid "FreiChat"
+msgstr "FreiChat"
+
+msgctxt "Addons::description::freichat"
+msgid "FreiChat is a free chat software which works as a SaaS for your CS Cart website.
+It automatically integrates with your site's login and profiles to give you a seamless chatting experience."
+msgstr "FreiChat is a free chat software which works as a SaaS for your CS Cart website.
+It automatically integrates with your site's login and profiles to give you a seamless chatting experience."
+
+msgctxt "Languages::recaptcha.freichat_token_notice"
+msgid "<p>Token used to communicate with FreiChat server. Please do not edit this.</p>"
+msgstr "<p>Token used to communicate with FreiChat server. Please do not edit this.</p>"

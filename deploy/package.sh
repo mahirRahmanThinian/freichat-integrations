@@ -3,7 +3,7 @@
 # Init
 CURR_DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
 BASE_DIR=${CURR_DIR}/..
-VERSION=1.0.2
+VERSION=1.0.3
 INTEG_DIR=$BASE_DIR/integrations
 
 # Cleanup
@@ -29,4 +29,8 @@ zip -r $BASE_DIR/bin/${NAME}.v${VERSION}.zip .
 
 cd $INTEG_DIR/wordpress
 NAME=wordpress_freichat
+zip -r $BASE_DIR/bin/${NAME}.v${VERSION}.zip .
+
+cd $INTEG_DIR/cs-cart
+NAME=cscart_freichat
 zip -r $BASE_DIR/bin/${NAME}.v${VERSION}.zip .

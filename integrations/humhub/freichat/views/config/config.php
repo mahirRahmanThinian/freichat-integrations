@@ -14,7 +14,7 @@ use yii\helpers\Url;
 
         <?php $form = ActiveForm::begin(['id' => 'configure-form']); ?>
         <div class="form-group">
-            <?= $form->field($model, 'token')->textInput(['class' => 'form-control', 'disabled' => true])->label(false) ?>
+            <?= $form->field($model, 'token')->textInput(['class' => 'form-control', 'disabled' => false])->label(false) ?>
 
         </div>
 

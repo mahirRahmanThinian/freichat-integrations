@@ -20,7 +20,8 @@ if ($user->id != 0 && strpos($token, "$$") !== FALSE) {
 
     $id = $user->id;
     $name = base64_encode($user->name);
-    $avatar = base64_encode("https://api.adorable.io/avatars/60/{$user->email}.png");
+    $hash = md5(strtolower(trim($user->email)));
+    $avatar = base64_encode("https://www.gravatar.com/avatar/$hash");
     $pubKey = explode("$$", $token)[0];
     $change = date('Ymd');
 

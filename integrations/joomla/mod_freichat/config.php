@@ -6,7 +6,7 @@ defined('_JEXEC') or die;
 /**
  * Module common configuration
  * @package Module Module for Joomla! 3.X
- * @version 1.0.0
+ * @version 1.0.3
  * @author Codologic
  * @license  GNU/GPLv3 http://www.gnu.org/licenses/gpl-3.0.html
  * @copyright Codologic 2010-2019

@@ -6,7 +6,7 @@
 Plugin Name: FreiChat
 Plugin URI: https://freichat.com/
 Description: A scalable chat solution - The best way to engage your users
-Version: 1.0.0
+Version: 1.0.3
 Author: Codologic
 Author URI: https://codologic.com/
 License: GPLv2 or later
